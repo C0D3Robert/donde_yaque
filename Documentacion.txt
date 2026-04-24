@@ -1,0 +1,57 @@
+╰─ ls 
+'Bot copia'   hash.txt       Música         package-lock.json   Vídeos
+ Descargas    Herramientas   node_modules   Plantillas         'VirtualBox VMs'
+ Documentos   Imágenes       openvpn3       Proyectos
+ Escritorio   jhon           package.json   Público
+╭─░▒▓       ~  ·····································  ✔   17:37:12   ▓▒░
+╰─ cd Proyectos/Django/donde_yaque/backend
+╭─░▒▓       ~/Proyectos/Django/donde_yaque/backend  ··············  ✔   17:37:43   ▓▒░
+╰─ python3 -m venv venv
+╭─░▒▓       ~/Proyectos/Django/donde_yaque/backend  ·····  ✔   6s     17:38:53   ▓▒░
+╰─ source venv/bin/activate
+╭─░▒▓       ~/Pr/Django/donde_yaque/backend  ·······  ✔   backend     17:43:29   ▓▒░
+╰─ pip install django djangorestframework django-cors-headers python-decouple Pillow django-axes django-cleanup
+Collecting django
+  Downloading django-6.0.4-py3-none-any.whl.metadata (3.9 kB)
+Collecting djangorestframework
+  Downloading djangorestframework-3.17.1-py3-none-any.whl.metadata (7.9 kB)
+Collecting django-cors-headers
+  Using cached django_cors_headers-4.9.0-py3-none-any.whl.metadata (16 kB)
+Collecting python-decouple
+  Downloading python_decouple-3.8-py3-none-any.whl.metadata (14 kB)
+Collecting Pillow
+  Downloading pillow-12.2.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting django-axes
+  Downloading django_axes-8.3.1-py3-none-any.whl.metadata (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.3/41.3 kB 97.2 kB/s eta 0:00:00
+Collecting django-cleanup
+  Downloading django_cleanup-9.0.0-py3-none-any.whl.metadata (10 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Downloading asgiref-3.11.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Downloading django-6.0.4-py3-none-any.whl (8.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 51.5 kB/s eta 0:00:00
+Downloading djangorestframework-3.17.1-py3-none-any.whl (898 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 898.8/898.8 kB 65.9 kB/s eta 0:00:00
+Using cached django_cors_headers-4.9.0-py3-none-any.whl (12 kB)
+Downloading python_decouple-3.8-py3-none-any.whl (9.9 kB)
+Downloading pillow-12.2.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 86.2 kB/s eta 0:00:00
+Downloading django_axes-8.3.1-py3-none-any.whl (74 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.2/74.2 kB 110.5 kB/s eta 0:00:00
+Downloading django_cleanup-9.0.0-py3-none-any.whl (10 kB)
+Downloading asgiref-3.11.1-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.1/46.1 kB 81.3 kB/s eta 0:00:00
+Installing collected packages: python-decouple, sqlparse, Pillow, django-cleanup, asgiref, django, djangorestframework, django-cors-headers, django-axes
+Successfully installed Pillow-12.2.0 asgiref-3.11.1 django-6.0.4 django-axes-8.3.1 django-cleanup-9.0.0 django-cors-headers-4.9.0 djangorestframework-3.17.1 python-decouple-3.8 sqlparse-0.5.5
+╭─░▒▓       ~/Pr/D/d/backend  ·········  ✔   5m 25s     backend     18:24:17   ▓▒░
+╰─ pip freeze > requirements.txt
+╭─░▒▓       ~/Pr/Django/donde_yaque/backend  ·······  ✔   backend     18:28:59   ▓▒░
+╰─ django-admin startproject core .
+╭─░▒▓       ~/Pr/Django/donde_yaque/backend  ·······  ✔   backend     18:30:37   ▓▒░
+╰─ python manage.py startapp catalogo
+╭─░▒▓       ~/Pr/Django/donde_yaque/backend  ·······  ✔   backend     18:31:01   ▓▒░
+╰─   
+

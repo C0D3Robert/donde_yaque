@@ -1,0 +1,67 @@
+# ============================================
+# PYTHON / DJANGO
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+*.log
+.env
+*.env.local
+*.env.production
+
+# Django
+backend/staticfiles/
+backend/media/
+*.sqlite3
+db.sqlite3
+
+# Virtualenv
+backend/venv/
+env/
+.venv/
+
+# ============================================
+# NODE / REACT
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite
+frontend/dist/
+frontend/.vite/
+
+# Env files
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# ============================================
+# IDE / EDITOR
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================
+# SEGURIDAD - NUNCA SUBIR
+# ============================================
+*.pem
+*.key
+*.crt
+*.cert
+credentials.json
+secret*
+*.secret

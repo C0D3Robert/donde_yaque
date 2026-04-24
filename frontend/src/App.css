@@ -1,0 +1,216 @@
+/* src/App.css - COMPLETO */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --fondo-oscuro: #0F0F1A;      /* Negro azulado de fondo */
+  --fondo-card: #FFFFFF;
+  --texto-principal: #1A1A1A;
+  --texto-secundario: #666666;
+  --dorado: #C9A96E;            /* Dorado del logo y badge Nuevo */
+  --blanco: #FFFFFF;
+  --gris-claro: #F5F5F5;
+  --borde: #E5E5E5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--fondo-oscuro);
+  color: var(--texto-principal);
+  line-height: 1.6;
+}
+
+/* ============ NAVBAR SUPERIOR ============ */
+.navbar-top {
+  background-color: var(--fondo-oscuro);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-navbar {
+  height: 40px;
+  width: auto;
+}
+
+/* ============ MAIN ============ */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  background-color: var(--blanco);
+  border-radius: 16px 16px 0 0;
+  margin-top: 2rem;
+}
+
+/* ============ HERO CATÁLOGO ============ */
+.hero-catalogo {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero-catalogo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--texto-principal);
+  margin-bottom: 0.75rem;
+}
+
+.hero-catalogo p {
+  font-size: 1.1rem;
+  color: var(--texto-secundario);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============ FILTROS CATEGORÍAS ============ */
+.filtros-categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filtros-categorias button {
+  background: transparent;
+  border: 1px solid var(--borde);
+  color: var(--texto-secundario);
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filtros-categorias button:hover {
+  border-color: var(--texto-principal);
+  color: var(--texto-principal);
+}
+
+.filtros-categorias button.active {
+  background: var(--texto-principal);
+  color: var(--blanco);
+  border-color: var(--texto-principal);
+}
+
+/* ============ CONTADOR ============ */
+.resultados-info {
+  margin-bottom: 1.5rem;
+}
+
+.contador {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+}
+
+/* ============ GRID CATÁLOGO ============ */
+.grid-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ============ CARD ============ */
+.card {
+  background: var(--blanco);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--gris-claro);
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============ BADGES DENTRO DE LA IMAGEN ============ */
+.badges-container {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.badge-nuevo {
+  background-color: var(--dorado);
+  color: var(--blanco);
+}
+
+.badge-popular {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--texto-principal);
+}
+
+/* ============ CARD BODY ============ */
+.card-body {
+  padding: 1rem 0.5rem 0.5rem;
+}
+
+.card-body h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.card-body .descripcion {
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.card-body .precio {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+}
+
+/* ============ ESTADOS ============ */
+.cargando, .error {
+  text-align: center;
+  padding: 3rem;
+  color: var(--texto-secundario);
+}
+
+.error {
+  color: #C0392B;
+}
