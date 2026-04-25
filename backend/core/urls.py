@@ -5,7 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # URL ofuscada para el panel de administración (cambia 'gestion-secreta-2025' por tu propia cadena)
-admin_url = 'gestion-catalogo-donde-yaque'
+admin_url = 'gestion-catalogo-donde-yaque/'
 
 urlpatterns = [
     path(admin_url, admin.site.urls),

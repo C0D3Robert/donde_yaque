@@ -22,3 +22,7 @@ class PrendaAdmin(admin.ModelAdmin):
         ('Badges y visibilidad', {'fields': ('es_nuevo', 'es_popular', 'activa')}),
         ('Metadata', {'fields': ('fecha_creacion',), 'classes': ('collapse',)}),
     )
+
+admin.site.site_header = "Donde Yaque — Administración"
+admin.site.site_title = "Donde Yaque Admin"
+admin.site.index_title = "Panel de control — Catálogo de ropa"

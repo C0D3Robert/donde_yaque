@@ -1,0 +1,161 @@
+* {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+:root{
+  --header-bg: rgba(0,0,0,0.60); /* header claro */
+  --header-link-color: #d1a84b;      /* color branding (dorado) */
+  --link-fg: #a8a285;                /* links principales */
+
+  --default-button-bg: #b87f2f;
+
+}
+
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background: url("/static/image/fondo_admin.webp") center/cover no-repeat fixed;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(0,0,0,0.50); /* menos opaco para más detalle */
+  z-index: 0;
+  pointer-events: none;
+}
+
+#header {
+  background: color-mix(in oklab, #05070f 75%, transparent);
+  border-bottom: #252933;
+  padding: 12px 20px;
+  height: 60px;
+  z-index: 3;
+}
+
+#site-name h1, #site-name a {
+  font-family: 'Great Vibes';
+  font-weight: 600;
+  color: #d1a84b !important;
+  font-size: 2rem;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+#user-tools {
+  font-size: 1rem;
+}
+
+#user-tools a, #user-tools button, #content-main .addlink {
+  background: linear-gradient(90deg,#d1a84b,#b87f2f) !important;
+  color: #081017 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: .45rem .9rem !important;
+  box-shadow: 0 8px 22px rgba(184,127,47,0.12) !important;
+  font-size: 1rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.theme-toggle {
+  display: none;
+}
+
+.breadcrumbs {
+  background: #121212 !important;
+}
+
+.breadcrumbs a {
+  color: #a8a285 !important;
+  text-decoration: none !important;
+}
+
+#content h1 {
+  color: #d1a84b;
+}
+
+#nav-sidebar div table caption a {
+  color: #d1a84b !important;
+}
+
+table#result_list {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+table#result_list thead th {
+  background: rgba(5,7,15,0.92) !important;
+  color: #d1a84b !important;
+  border: none !important;
+}
+
+table#result_list tbody tr {
+  background: rgba(255,255,255,0.02) !important;
+  color: #e6dac8; 
+}
+
+/* Celdas: truncado y padding consistente */
+table#result_list td, table#result_list th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: .7rem .8rem !important;
+  vertical-align: middle;
+  background: transparent !important;
+  color: inherit;
+  text-decoration: none !important;
+  font-size: 1rem;
+}
+
+/* Hover más notorio */
+table#result_list tbody tr:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* Inputs y selects: fondo semitransparente y borde sutil dorado */
+input, textarea, select, .vTextField, .vLargeTextField {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(209,168,75,0.10) !important;
+  color: #efe6d6 !important;
+  padding: .45rem .6rem !important;
+  border-radius: 6px !important;
+}
+
+#changelist-filter {
+  background-color: #121212;
+}
+
+#changelist-filter h2 {
+  font-size: 1.2rem;
+}
+
+#changelist-filter div h3 a {
+  color: #d1a84b;
+  text-decoration: none !important;
+}
+
+#changelist-filter details summary {
+  color: #d1a84b;
+  text-transform: uppercase;
+}
+
+#changelist-filter details ul li a {
+  text-decoration: none !important;
+  color: #a8a285;
+}
+
+.button, input[type=submit], .submit-row input, a.button {
+  background: linear-gradient(90deg,#d1a84b,#b87f2f) !important;
+  color: #081017 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: .45rem .9rem !important;
+  box-shadow: 0 8px 22px rgba(184,127,47,0.12) !important;
+}
