@@ -1,0 +1,197 @@
+/* ===== PRENDA CARD ===== */
+
+.prenda-card {
+  background: rgba(30, 30, 45, 0.8);
+  border: 1px solid rgba(201, 169, 75, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.prenda-card:hover {
+  border-color: rgba(201, 169, 75, 0.6);
+  box-shadow: 0 12px 30px rgba(201, 169, 75, 0.15);
+  transform: translateY(-6px);
+}
+
+/* Contenedor de imagen */
+.prenda-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(50, 50, 70, 0.8), rgba(30, 30, 50, 0.8));
+}
+
+.prenda-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.prenda-card:hover .prenda-card-image img {
+  transform: scale(1.05);
+}
+
+/* Badges */
+.prenda-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  width: fit-content;
+  backdrop-filter: blur(8px);
+}
+
+.badge-nuevo {
+  background: linear-gradient(90deg, #d1a84b, #b87f2f);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-popular {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border: 1px solid rgba(201, 169, 75, 0.3);
+}
+
+/* Overlay "Ver detalles" */
+.prenda-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.prenda-card:hover .prenda-overlay {
+  opacity: 1;
+}
+
+.ver-detalles-btn {
+  background: linear-gradient(90deg, #d1a84b, #b87f2f);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ver-detalles-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(201, 169, 75, 0.3);
+}
+
+.ver-detalles-btn:active {
+  transform: scale(0.98);
+}
+
+/* Información de la prenda */
+.prenda-info {
+  padding: 16px 14px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prenda-nombre {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f2e4a6;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.prenda-descripcion {
+  font-size: 0.85rem;
+  color: rgba(242, 228, 166, 0.7);
+  margin: 0 0 auto 0;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.prenda-precio {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d1a84b;
+  margin: 8px 0 0 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .prenda-card-image {
+    aspect-ratio: 3 / 4;
+  }
+
+  .prenda-nombre {
+    font-size: 0.95rem;
+  }
+
+  .prenda-descripcion {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prenda-info {
+    padding: 12px 10px;
+  }
+
+  .prenda-nombre {
+    font-size: 0.9rem;
+  }
+
+  .prenda-descripcion {
+    font-size: 0.78rem;
+  }
+
+  .prenda-precio {
+    font-size: 1rem;
+  }
+
+  .ver-detalles-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}

@@ -1,28 +1,38 @@
-// src/components/PrendaCard.jsx
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './PrendaCard.css';
 
-const PrendaCard = ({ prenda }) => {
+export default function PrendaCard({ prenda }) {
+  const navigate = useNavigate();
+  
+  const handleViewDetails = () => {
+    navigate(`/prenda/${prenda.id}`);
+  };
+
   return (
-    <div className="card">
-      <div className="card-image-container">
-        <img 
-          src={prenda.imagen_url || 'https://via.placeholder.com/400x500?text=Sin+imagen'} 
-          alt={prenda.nombre}
-          loading="lazy"
-        />
-        {/* Badges dentro de la imagen, arriba a la izquierda */}
-        <div className="badges-container">
+    <div className="prenda-card">
+      {/* Contenedor de imagen */}
+      <div className="prenda-card-image">
+        <img src={prenda.imagen_url || 'https://via.placeholder.com/400x500?text=Sin+imagen'} alt={prenda.nombre} loading="lazy" />
+        
+        {/* Badges */}
+        <div className="prenda-badges">
           {prenda.es_nuevo && <span className="badge badge-nuevo">Nuevo</span>}
           {prenda.es_popular && <span className="badge badge-popular">Popular</span>}
         </div>
+
+        {/* Overlay "Ver detalles" */}
+        <div className="prenda-overlay">
+          <button className="ver-detalles-btn" onClick={handleViewDetails}>
+            Ver detalles
+          </button>
+        </div>
       </div>
-      <div className="card-body">
-        <h3>{prenda.nombre}</h3>
-        <p className="descripcion">{prenda.descripcion}</p>
-        <p className="precio">${prenda.precio}</p>
+
+      {/* Información de la prenda */}
+      <div className="prenda-info">
+        <h3 className="prenda-nombre">{prenda.nombre}</h3>
+        <p className="prenda-descripcion">{prenda.descripcion}</p>
       </div>
     </div>
   );
-};
-
-export default PrendaCard;
+}

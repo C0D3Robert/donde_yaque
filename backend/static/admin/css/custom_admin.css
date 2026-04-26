@@ -5,7 +5,7 @@
 
 :root{
   --header-bg: rgba(0,0,0,0.60); /* header claro */
-  --header-link-color: #d1a84b;      /* color branding (dorado) */
+  --header-link-color: #f2e4a6;      /* color branding (dorado) */
   --link-fg: #a8a285;                /* links principales */
 
   --default-button-bg: #b87f2f;
@@ -51,7 +51,7 @@ body::before {
 }
 
 #user-tools a, #user-tools button, #content-main .addlink {
-  background: linear-gradient(90deg,#d1a84b,#b87f2f) !important;
+  background: linear-gradient(90deg,#f2e4a6,#d1a84b) !important;
   color: #081017 !important;
   border: none !important;
   border-radius: 8px !important;
@@ -59,6 +59,11 @@ body::before {
   box-shadow: 0 8px 22px rgba(184,127,47,0.12) !important;
   font-size: 1rem;
   font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+#user-tools a:hover, #user-tools button:hover, #content-main .addlink:hover {
+  background: #d1a84b !important;
+  transition: 0.7s;
 }
 
 .theme-toggle {
@@ -75,11 +80,11 @@ body::before {
 }
 
 #content h1 {
-  color: #d1a84b;
+  color: #f2e4a6;
 }
 
 #nav-sidebar div table caption a {
-  color: #d1a84b !important;
+  color: #f2e4a6 !important;
 }
 
 table#result_list {
@@ -90,7 +95,7 @@ table#result_list {
 
 table#result_list thead th {
   background: rgba(5,7,15,0.92) !important;
-  color: #d1a84b !important;
+  color: #f2e4a6 !important;
   border: none !important;
 }
 
@@ -137,12 +142,12 @@ input, textarea, select, .vTextField, .vLargeTextField {
 }
 
 #changelist-filter div h3 a {
-  color: #d1a84b;
+  color: #f2e4a6;
   text-decoration: none !important;
 }
 
 #changelist-filter details summary {
-  color: #d1a84b;
+  color: #f2e4a6;
   text-transform: uppercase;
 }
 
@@ -152,7 +157,7 @@ input, textarea, select, .vTextField, .vLargeTextField {
 }
 
 .button, input[type=submit], .submit-row input, a.button {
-  background: linear-gradient(90deg,#d1a84b,#b87f2f) !important;
+  background: linear-gradient(90deg,#f2e4a6,#d1a84b) !important;
   color: #081017 !important;
   border: none !important;
   border-radius: 8px !important;

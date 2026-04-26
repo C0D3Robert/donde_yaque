@@ -1,20 +1,16 @@
 // src/components/Layout.jsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import logo from '../assets/logo.jpg';
+import Navbar from './Navbar';
 
-const Layout = ({ children, title = 'Catálogo' }) => {
+const Layout = ({ children, title = 'Donde Yaque' }) => {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
-        <meta name="description" content="Catálogo de ropa confeccionada con elegancia" />
+        <title>{title} — Donde Yaque</title>
+        <meta name="description" content="Catálogo de ropa confeccionada con elegancia y atención al detalle. Alta costura accesible." />
       </Helmet>
-      <nav className="navbar-top">
-        <div className="navbar-container">
-          <img src={logo} alt="Logo" className="logo-navbar" />
-        </div>
-      </nav>
+      <Navbar />
       <main>{children}</main>
     </>
   );

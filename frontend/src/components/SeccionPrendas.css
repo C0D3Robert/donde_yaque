@@ -1,0 +1,141 @@
+/* ===== SECCION PRENDAS ===== */
+
+.seccion-prendas {
+  padding: 3rem 2rem;
+  background: transparent;
+}
+
+.seccion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.seccion-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #f2e4a6;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.ver-mas-link {
+  background: none;
+  border: none;
+  color: #d1a84b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ver-mas-link:hover {
+  color: #f2e4a6;
+  gap: 12px;
+}
+
+.flecha {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.ver-mas-link:hover .flecha {
+  transform: translateX(2px);
+}
+
+/* Grid responsivo */
+.grid-prendas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estados */
+.cargando, .error, .sin-resultados {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(242, 228, 166, 0.6);
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.sin-resultados {
+  color: rgba(242, 228, 166, 0.5);
+  font-style: italic;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1400px) {
+  .grid-prendas {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .seccion-prendas {
+    padding: 2rem 1.5rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.75rem;
+  }
+
+  .grid-prendas {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .seccion-prendas {
+    padding: 1.5rem 1rem;
+  }
+
+  .seccion-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.5rem;
+  }
+
+  .ver-mas-link {
+    font-size: 0.85rem;
+  }
+
+  .grid-prendas {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-prendas {
+    padding: 1rem 0.75rem;
+  }
+
+  .seccion-titulo {
+    font-size: 1.3rem;
+  }
+
+  .grid-prendas {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .ver-mas-link {
+    font-size: 0.8rem;
+  }
+}

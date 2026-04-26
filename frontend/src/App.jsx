@@ -13,7 +13,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* Podemos añadir ruta de detalle después */}
+            <Route path="/catalogo" element={<HomePage />} />
+            {/* Podemos añadir rutas adicionales después */}
           </Routes>
         </Layout>
       </BrowserRouter>
