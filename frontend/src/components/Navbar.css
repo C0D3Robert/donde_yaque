@@ -85,27 +85,6 @@
   color: #f2e4a6;
 }
 
-/* ===== SOCIAL LINKS ===== */
-.social-links {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.social-icon {
-  color: #f2e4a6;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.social-icon:hover {
-  color: #d1a84b;
-  transform: scale(1.2) rotate(5deg);
-}
-
 /* ===== CATALOG BUTTON ===== */
 .catalog-btn {
   background: linear-gradient(90deg, #d1a84b, #b87f2f);

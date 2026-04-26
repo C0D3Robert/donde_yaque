@@ -1,0 +1,57 @@
+footer {
+    background: #121212;
+    border-top: 1px solid #f2e4a6;
+    padding: 2rem 10rem;
+}
+
+footer h2 {
+    font-family: 'Great Vibes', serif;
+    font-size: 2rem;
+    color: #d1a84b;
+}
+
+footer h3 {
+    color: #d1a84b;
+}
+
+footer p {
+    color:#948f82;
+}
+
+.grid-item {
+    margin: 2rem 0;
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 8px;
+    border-radius: 5px;
+    border: 1px solid #d1a84b;
+}
+
+.iconos {
+    color: color-mix(in oklab, #d1a84b 70%, transparent);
+}
+
+.flex {
+    display: flex;
+    margin-top: 10px;
+}
+
+.flex div {
+    padding: 0 15px;
+    justify-items: start;
+}
+
+.derechos {
+    border-top: 0.5px solid #948f82;
+    padding: 10px;
+    justify-items: start;
+}

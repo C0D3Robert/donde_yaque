@@ -4,7 +4,7 @@ import './Hero.css';
 // Importar imágenes del carousel
 import img1 from '../assets/slide1.webp';
 import img2 from '../assets/slide2.webp';
-import img3 from '../assets/slide3.jpg';
+import img3 from '../assets/slide3.webp';
 
 // Array de slides con títulos y descripciones
 const slides = [

@@ -32,6 +32,7 @@ export default function PrendaCard({ prenda }) {
       <div className="prenda-info">
         <h3 className="prenda-nombre">{prenda.nombre}</h3>
         <p className="prenda-descripcion">{prenda.descripcion}</p>
+        <p className="prenda-precio">{prenda.precio}</p>
       </div>
     </div>
   );

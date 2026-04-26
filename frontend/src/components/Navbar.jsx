@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { IoMdSearch } from "react-icons/io";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
+import RedesSociales from '../components/RedesSociales';
+import Logo from '../assets/logo.jpg';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -30,7 +32,8 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo / Brand */}
-        <div className="navbar-brand">
+        <div className="navbar-brand logotipo" >
+          <img src={Logo} alt="Logo" className='logo' />
           <h1>Donde Yaque</h1>
         </div>
 
@@ -51,31 +54,12 @@ export default function Navbar() {
               className="search-input"
             />
             <button type="submit" className="search-btn">
-              🔍
+              <IoMdSearch />
             </button>
           </form>
 
           {/* Redes sociales */}
-          <div className="social-links">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              aria-label="Facebook"
-            >
-              <FaFacebook size={20} />
-            </a>
-            <a
-              href="https://wa.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon"
-              aria-label="WhatsApp"
-            >
-              <FaWhatsapp size={20} />
-            </a>
-          </div>
+          <RedesSociales />
 
           {/* Botón Catálogo */}
           <button className="catalog-btn" onClick={handleCatalogClick}>

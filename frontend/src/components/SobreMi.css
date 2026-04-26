@@ -1,0 +1,46 @@
+.sobre-mi {
+    padding: 4rem 10rem;
+    background-color: #121212;
+    text-align: center;
+    border-top: 1px solid #f2e4a6;
+    color: #f2e4a6;
+}
+
+.sobre-mi h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    color: #f4f2ea;
+}
+
+.sobre-mi h3 {
+    margin-bottom: 1rem;
+    color: #f4f2ea;
+}
+
+.sobre-mi p {
+    color: #948f82;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.grid-item {
+    justify-items: center;
+    align-content: start;
+}
+
+.icons {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #f2e4a6;
+    margin-bottom: 1rem;
+}
