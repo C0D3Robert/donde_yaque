@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .navbar {
-  background: color-mix(in oklab, #05070f 75%, transparent);
+  background: color-mix(in oklab, #05070f 95%, transparent);
   border-bottom: 2px solid #252933;
   padding: 0;
   position: sticky;
@@ -122,6 +122,19 @@
 
 .hamburger:hover {
   color: #d1a84b;
+}
+
+.navegacion {
+  margin-left: 1rem;
+  justify-items: start;
+}
+
+.no-style-btn {
+  background: none;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #948f82;
 }
 
 /* ===== RESPONSIVE: MOBILE ===== */

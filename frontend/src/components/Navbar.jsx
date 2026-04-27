@@ -19,12 +19,17 @@ export default function Navbar() {
     if (searchQuery.trim()) {
       navigate(`/catalogo?search=${encodeURIComponent(searchQuery)}`);
       setSearchQuery('');
-      setIsOpen(false); // cerrar menu si está abierto
+      setIsOpen(false);
     }
   };
 
   const handleCatalogClick = () => {
     navigate('/catalogo');
+    setIsOpen(false);
+  };
+
+  const handleInicioClick = () => {
+    navigate('');
     setIsOpen(false);
   };
 
@@ -66,6 +71,13 @@ export default function Navbar() {
             Ver Catálogo
           </button>
         </div>
+      </div>
+      <div className='navegacion'>
+        <p>
+          <button className='no-style-btn' onClick={handleInicioClick}>
+            Inicio
+          </button>
+        </p>
       </div>
     </nav>
   );

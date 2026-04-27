@@ -11,16 +11,16 @@ export default function RedesSociales() {
                 className="social-icon"
                 aria-label="Facebook"
             >
-                <FaFacebook size={20} />
+                <FaFacebook size={30} />
             </a>
             <a
-                href="https://wa.me/+53 53686161"
+                href="http://whatsapp.com/channel/0029Vb7j65r9RZAPeTOUtq11"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
                 aria-label="WhatsApp"
             >
-                <FaWhatsapp size={20} />
+                <FaWhatsapp size={34} />
             </a>
         </div>
     )

@@ -1,7 +1,6 @@
 import './footer.css';
 import RedesSociales from '../components/RedesSociales';
 import { FaWhatsapp } from 'react-icons/fa';
-import { IoMailOutline, IoLocateOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 import { TiLocationOutline } from "react-icons/ti";
 import Logo from '../assets/logo.jpg';
@@ -28,31 +27,24 @@ export default function footer() {
                     </h3>
                     <div className="iconos">
                         <div className="flex">
-                            <FaWhatsapp size={30}/>
+                            <FaWhatsapp size={30} />
                             <div>
-                            <p>Whatsapp</p>
-                            <p>+53 53686161</p>
+                                <p>Whatsapp</p>
+                                <p>+53 53686161</p>
                             </div>
                         </div>
                         <div className="flex">
-                            <IoMailOutline size={30}/>
+                            <FiPhone size={30} />
                             <div>
-                            <p>Correo</p>
-                            <p>artemanos@gmil.com</p>
+                                <p>Teléfono</p>
+                                <p>+53 53686161</p>
                             </div>
                         </div>
                         <div className="flex">
-                            <FiPhone size={30}/>
+                            <TiLocationOutline size={30} />
                             <div>
-                            <p>Teléfono</p>
-                            <p>+53 53686161</p>
-                            </div>
-                        </div>
-                        <div className="flex">
-                            <TiLocationOutline size={30}/>
-                            <div>
-                            <p>Ciudad</p>
-                            <p>Santiago de Cuba</p>
+                                <p>Ciudad</p>
+                                <p>Santiago de Cuba</p>
                             </div>
                         </div>
                     </div>
@@ -66,6 +58,12 @@ export default function footer() {
                     <h3>
                         Sitios de interés
                     </h3>
+                    <ul>
+                        <li><a href="">Sobre Nosotros</a></li>
+                        <li><a href="">Cuidado de prendas</a></li>
+                        <li><a href="">Guía de tallas</a></li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                    </ul>
                 </div>
             </div>
             <div className='derechos'>

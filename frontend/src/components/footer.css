@@ -16,10 +16,30 @@ footer h3 {
 
 footer p {
     color:#948f82;
+    margin-bottom: 0.5rem;
 }
 
 .grid-item {
     margin: 2rem 0;
+}
+
+.grid-item ul li a {
+    text-decoration: none;
+    color: #948f82;
+}
+
+.grid-item ul li a:hover {
+    color: #d1a84b;
+    font-size: 1.1rem;
+    transition: 0.5s;
+}
+
+.grid-item ul {
+    justify-items: start;
+}
+
+.grid-item ul li {
+    margin-top: 1.1rem;
 }
 
 .logotipo {

@@ -11,20 +11,20 @@ const slides = [
   {
     id: 1,
     image: img1,
-    title: 'Estilo que define',
-    description: 'Prendas únicas diseñadas para resaltar tu personalidad',
+    title: 'Tradición que rompe esquemas',
+    description: 'Artesanía con actitud. Viste diferente.',
   },
   {
     id: 2,
     image: img2,
-    title: 'Elegancia en cada puntada',
-    description: 'Confecciones artesanales con los mejores materiales',
+    title: 'Raíces con estilo',
+    description: 'Lo nuestro, llevado a otro nivel.',
   },
   {
     id: 3,
     image: img3,
-    title: 'Alta costura accesible',
-    description: 'Lujo y calidad al alcance de todos',
+    title: 'Hecho a mano, hecho para destacar',
+    description: 'Moda con historia, diseñada para impactar.',
   },
 ];
 

@@ -8,13 +8,10 @@ export default function SobreMi() {
     <section className="sobre-mi">
       <h2>Sobre Donde Yaque</h2>
       <p>
-        En Donde Yaque nos dedicamos a la confección de prendas únicas que combinan elegancia, calidad y atención
-      </p>
-      <p>
-        al detalle. Cada pieza es creada con pasión y los más finos materiales, asegurando que nuestros clientes luzcan
-      </p>
-      <p>
-        excepcionales en cada ocasión.
+        En Donde Yaque creamos prendas únicas que fusionan la tradición artesanal con la tendencia de la moda actual. Cada pieza combina técnicas heredadas, diseños modernos y una cuidada atención al detall, logrando un equilibrio entre lo clásico y lo contemporáneo.
+        <br />
+        <br />
+        Trabajamos con pasión y materiales de alta calidad para ofrecer creaciones auténticas, pensadas para quienes buscan estilo, identidad y distinción en cada ocasión.
       </p>
       <div className="grid">
         <div className="grid-item">
@@ -25,7 +22,7 @@ export default function SobreMi() {
                 Confección Artesanal
             </h3>
             <p>
-                Cada prenda es confeccionada con técnicas tradicionales y atención al detalle.
+                Prendas elaboradas con técnicas tradicionales adaptadas a la moda actual.
             </p>
         </div>
         <div className="grid-item">
@@ -36,7 +33,7 @@ export default function SobreMi() {
                 Materiales Premiun
             </h3>
             <p>
-                Utilizamos solo telas y materiales de la más alta calidad.
+                Selección de telas de alta calidad para un acabado moderno y duradero.
             </p>
         </div>
         <div className="grid-item">
@@ -47,7 +44,7 @@ export default function SobreMi() {
                 Diseño exclusivo
             </h3>
             <p>
-                Piezas únicas diseñadas para resaltar tu estilo personal.
+                Creaciones únicas que combinan tradición, estilo y personalidad.
             </p>
         </div>
       </div>
