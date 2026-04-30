@@ -1,0 +1,113 @@
+/* ===== BREADCRUMB STYLES ===== */
+@import '../styles/variables.css';
+
+/* ===== BREADCRUMB NAV ===== */
+
+.breadcrumb-nav {
+  background: var(--gradient-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  padding: var(--spacing-sm) 0;
+  width: 100%;
+  position: sticky;
+  top: 4.9rem;
+  z-index: var(--z-sticky);
+  backdrop-filter: blur(5px);
+}
+
+.breadcrumb-container {
+  max-width: 100%;
+  padding: 0 var(--spacing-4xl);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  box-sizing: border-box;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.breadcrumb-link {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.breadcrumb-link:hover {
+  color: var(--color-primary-light);
+}
+
+.breadcrumb-link:last-child {
+  color: var(--color-primary-light);
+  cursor: default;
+  pointer-events: none;
+}
+
+.breadcrumb-separator {
+  color: var(--color-border-medium);
+  font-size: var(--font-size-xs);
+  margin: 0 var(--spacing-xs);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1280px) {
+  .breadcrumb-container {
+    padding: 0 var(--spacing-3xl);
+  }
+}
+
+@media (max-width: 1024px) {
+  .breadcrumb-container {
+    padding: 0 var(--spacing-2xl);
+  }
+
+  .breadcrumb-link {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-nav {
+    padding: var(--spacing-xs) 0;
+  }
+
+  .breadcrumb-container {
+    padding: 0 var(--spacing-lg);
+    gap: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .breadcrumb-link {
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 var(--spacing-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .breadcrumb-link {
+    font-size: var(--font-size-xs);
+  }
+
+  .breadcrumb-separator {
+    margin: 0 var(--spacing-xs);
+    font-size: var(--font-size-xs);
+  }
+}

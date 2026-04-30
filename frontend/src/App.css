@@ -1,36 +1,12 @@
-/* src/App.css - COMPLETO */
+/* src/App.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --fondo-oscuro: #0F0F1A;      /* Negro azulado de fondo */
-  --fondo-card: #FFFFFF;
-  --texto-principal: #1A1A1A;
-  --texto-secundario: #666666;
-  --dorado: #C9A96E;            /* Dorado del logo y badge Nuevo */
-  --blanco: #FFFFFF;
-  --gris-claro: #F5F5F5;
-  --borde: #E5E5E5;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Cormorant Garamond, Georgia, serif';
-  background-color: transparent !important;
-  background: transparent !important;
-  color: var(--texto-principal);
-  line-height: 1.6;
-}
+@import './styles/variables.css';
 
 /* ============ NAVBAR SUPERIOR ============ */
 .navbar-top {
-  background-color: var(--fondo-oscuro);
-  padding: 1rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-dark);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .navbar-container {
@@ -39,7 +15,7 @@ body {
 }
 
 .logo-navbar {
-  height: 40px;
+  height: var(--spacing-2xl);
   width: auto;
 }
 
@@ -49,11 +25,11 @@ main {
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: linear-gradient(180deg, #232323 0%, #121212 30%, #000000 100%) !important;
+  background: var(--gradient-bg) !important;
   box-sizing: border-box;
 }
 
-.home-page {
+.home-page, .catalogo-page {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto !important;
@@ -66,18 +42,18 @@ main {
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
   .home-page {
-    padding: 2rem 1.5rem;
+    padding: var(--spacing-2xl) var(--spacing-xl);
   }
 }
 
 @media (max-width: 768px) {
   .home-page {
-    padding: 1.5rem 1rem;
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
 }
 
 @media (max-width: 480px) {
   .home-page {
-    padding: 1rem 0.75rem;
+    padding: var(--spacing-lg) var(--spacing-sm);
   }
 }

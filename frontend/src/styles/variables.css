@@ -1,0 +1,111 @@
+/* ===== SISTEMA DE VARIABLES DE DISEÑO ===== */
+/* Paleta centralizada para facilitar cambios futuros */
+
+:root {
+  /* ===== COLORES PRINCIPALES ===== */
+  --color-primary: #d1a84b;          /* Dorado principal */
+  --color-primary-dark: #b87f2f;     /* Dorado oscuro */
+  --color-primary-light: #f2e4a6;    /* Dorado claro */
+  
+  /* ===== FONDOS ===== */
+  --color-bg-darkest: #05070f;       /* Fondo más oscuro */
+  --color-bg-dark: #0f0f1a;          /* Fondo oscuro principal */
+  --color-bg-secondary: #14141f;     /* Fondo secundario */
+  --color-bg-card: rgba(30, 30, 45, 0.8);  /* Fondo de cards */
+  --color-bg-overlay: rgba(0, 0, 0, 0.45); /* Overlay oscuro */
+  
+  /* ===== TEXTOS ===== */
+  --color-text-primary: #f2e4a6;     /* Texto principal claro */
+  --color-text-secondary: #b0a080;   /* Texto secundario */
+  --color-text-tertiary: #a8a285;    /* Texto terciario */
+  --color-text-dark: #1a1a1a;        /* Texto en fondos claros */
+  
+  /* ===== BORDES ===== */
+  --color-border-light: rgba(201, 169, 75, 0.15);  /* Borde sutil */
+  --color-border-medium: rgba(201, 169, 75, 0.3);  /* Borde medio */
+  --color-border-heavy: rgba(201, 169, 75, 0.6);   /* Borde notorio */
+  --color-border-base: #252933;                     /* Borde base */
+  
+  /* ===== OTROS COLORES ===== */
+  --color-search-bg: rgba(255, 255, 255, 0.06);
+  --color-search-border: rgba(242, 228, 166, 0.15);
+  --color-search-placeholder: rgba(242, 228, 166, 0.5);
+  
+  /* ===== TIPOGRAFÍA ===== */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Great Vibes', serif;
+  --font-sans: 'Poppins', 'Inter', sans-serif;
+  
+  /* ===== TAMAÑOS DE TIPOGRAFÍA ===== */
+  --font-size-xs: 0.65rem;
+  --font-size-sm: 0.75rem;
+  --font-size-base: 0.9rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.3rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.6rem;
+  --font-size-4xl: 2rem;
+  --font-size-5xl: 3.5rem;
+  
+  /* ===== ESPACIOS (PADDING/MARGIN) ===== */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 30px;
+  --spacing-4xl: 40px;
+  
+  /* ===== BORDES REDONDEADOS ===== */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 50%;
+  
+  /* ===== SOMBRAS ===== */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(209, 168, 75, 0.2);
+  --shadow-lg: 0 12px 30px rgba(201, 169, 75, 0.15);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.3);
+  
+  /* ===== GRADIENTES ===== */
+  --gradient-primary: linear-gradient(90deg, #d1a84b, #b87f2f);
+  --gradient-bg: linear-gradient(180deg, rgba(15, 15, 26, 0.98) 0%, rgba(20, 20, 35, 0.95) 100%);
+  
+  /* ===== TRANSICIONES ===== */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-smooth: 0.8s ease-in-out;
+  
+  /* ===== Z-INDEX ===== */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-navbar: 1000;
+  --z-modal-backdrop: 999;
+  --z-modal: 1000;
+  --z-floating-btn: 9950;
+  --z-floating-btn-high: 9999;
+}
+
+/* ===== ESTILOS BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-bg-darkest);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}

@@ -1,5 +1,7 @@
 /* ===== HERO CAROUSEL STYLES ===== */
+@import '../styles/variables.css';
 
+/* ===== CONTENEDOR PRINCIPAL ===== */
 .hero {
   width: 100%;
   height: 100vh;
@@ -13,7 +15,7 @@
   height: 100%;
 }
 
-/* Slides individuales */
+/* ===== SLIDES ===== */
 .hero-slide {
   position: absolute;
   width: 100%;
@@ -22,57 +24,57 @@
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  z-index: 1;
+  transition: opacity var(--transition-smooth);
+  z-index: var(--z-base);
 }
 
 .hero-slide.active {
   opacity: 1;
-  z-index: 2;
+  z-index: calc(var(--z-base) + 1);
 }
 
-/* Overlay oscuro transparente */
+/* ===== OVERLAY ===== */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
+  background: var(--color-bg-overlay);
+  z-index: var(--z-base);
 }
 
-/* Contenido del slide (título + descripción) */
+/* ===== CONTENIDO DEL SLIDE ===== */
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: calc(var(--z-base) + 2);
   text-align: center;
   width: 90%;
   max-width: 900px;
 }
 
 .hero-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-5xl);
   font-weight: 700;
-  color: #d1a84b;
-  margin: 0 0 20px 0;
-  letter-spacing: 1px;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-xl) 0;
+  letter-spacing: var(--spacing-xs);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  animation: fadeInDown 0.8s ease-out;
+  animation: fadeInDown var(--transition-smooth);
 }
 
 .hero-description {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
-  color: #f2e4a6;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
   margin: 0;
   font-weight: 400;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 0.8s ease-out 0.2s both;
+  animation: fadeInUp var(--transition-smooth) 0.2s both;
 }
 
 /* Animaciones de entrada */
@@ -110,26 +112,26 @@
 }
 
 .indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  width: var(--spacing-sm);
+  height: var(--spacing-sm);
+  border-radius: var(--radius-full);
   background: rgba(242, 228, 166, 0.4);
   border: 2px solid rgba(242, 228, 166, 0.6);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
   padding: 0;
 }
 
 .indicator.active {
-  background: #d1a84b;
-  border-color: #d1a84b;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
   width: 16px;
   height: 16px;
 }
 
 .indicator:hover {
   background: rgba(242, 228, 166, 0.7);
-  border-color: #f2e4a6;
+  border-color: var(--color-primary-light);
 }
 
 /* ===== RESPONSIVE ===== */

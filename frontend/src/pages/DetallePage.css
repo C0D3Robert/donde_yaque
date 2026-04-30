@@ -1,0 +1,453 @@
+/* ===== DETALLE PAGE STYLES ===== */
+@import '../styles/variables.css';
+
+/* ===== DETALLE PAGE ===== */
+
+.detalle-page {
+  min-height: 100vh;
+  background: var(--gradient-bg);
+  padding: var(--spacing-2xl) var(--spacing-4xl);
+}
+
+/* ===== HEADER ===== */
+
+.detalle-header {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.volver-btn {
+  background: transparent;
+  border: 1px solid var(--color-border-light);
+  color: var(--color-primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-normal);
+}
+
+.volver-btn:hover {
+  border-color: var(--color-border-medium);
+  color: var(--color-primary-light);
+  background: rgba(201, 169, 75, 0.08);
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+
+.detalle-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4xl);
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===== LADO IZQUIERDO: IMAGEN ===== */
+
+.detalle-imagen-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  position: sticky;
+  top: 120px;
+}
+
+.imagen-principal-wrapper {
+  position: relative;
+  width: 80%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, rgba(50, 50, 70, 0.8), rgba(30, 30, 50, 0.8));
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.imagen-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: var(--spacing-xs) var(--spacing-lg);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.badge-nuevo {
+  background: var(--gradient-primary);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-popular {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-border-light);
+}
+
+/* GALERÍA DE MINIATURAS - COMENTADA PARA FUTURA IMPLEMENTACIÓN */
+/*
+.galeria-miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.miniatura {
+  width: 80px;
+  height: 100px;
+  border: 2px solid rgba(201, 169, 75, 0.3);
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.miniatura:hover {
+  border-color: rgba(201, 169, 75, 0.6);
+}
+
+.miniatura.active {
+  border-color: #d1a84b;
+  box-shadow: 0 0 12px rgba(201, 169, 75, 0.4);
+}
+*/
+
+/* ===== LADO DERECHO: INFORMACIÓN ===== */
+
+.detalle-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.detalle-categoria {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.detalle-titulo {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-5xl);
+  font-weight: 400;
+  color: var(--color-primary-light);
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.detalle-precio {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+}
+
+.precio-value {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+}
+
+/* ===== DESCRIPCIÓN ===== */
+
+.detalle-descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+}
+
+.descripcion-titulo {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary-light);
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.descripcion-texto {
+  font-size: var(--font-size-base);
+  color: rgba(242, 228, 166, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== BOTÓN WHATSAPP ===== */
+
+.btn-whatsapp {
+  background: var(--gradient-primary);
+  color: var(--color-bg-dark);
+  border: none;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(-1px);
+}
+
+/* ===== NOTA AL PIE ===== */
+
+.detalle-nota {
+  font-size: var(--font-size-sm);
+  color: rgba(242, 228, 166, 0.5);
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ===== LOADING STATE ===== */
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: var(--spacing-xl);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(201, 169, 75, 0.2);
+  border-top-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-state p {
+  color: var(--color-primary);
+  font-size: var(--font-size-md);
+  font-family: var(--font-sans);
+}
+
+/* ===== ERROR STATE ===== */
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: var(--spacing-2xl);
+  text-align: center;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: var(--font-size-lg);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.volver-btn {
+  margin-top: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .detalle-page {
+    padding: 1.5rem 2rem;
+  }
+
+  .detalle-principal {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .detalle-imagen-container {
+    position: static;
+  }
+
+  .detalle-titulo {
+    font-size: 2.2rem;
+  }
+
+  .precio-value {
+    font-size: 1.6rem;
+  }
+
+  .btn-whatsapp {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .detalle-page {
+    padding: 1.2rem 1rem;
+  }
+
+  .detalle-header {
+    margin-bottom: 2rem;
+  }
+
+  .volver-btn {
+    padding: 9px 16px;
+    font-size: 0.85rem;
+  }
+
+  .detalle-principal {
+    gap: 1.8rem;
+  }
+
+  .detalle-titulo {
+    font-size: 1.8rem;
+  }
+
+  .detalle-categoria {
+    font-size: 0.85rem;
+  }
+
+  .precio-value {
+    font-size: 1.4rem;
+  }
+
+  .descripcion-titulo {
+    font-size: 1.1rem;
+  }
+
+  .descripcion-texto {
+    font-size: 0.9rem;
+  }
+
+  .btn-whatsapp {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    gap: 10px;
+  }
+
+  .detalle-nota {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalle-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .detalle-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .volver-btn {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+
+  .detalle-principal {
+    gap: 1.5rem;
+  }
+
+  .imagen-principal-wrapper {
+    aspect-ratio: 3 / 4;
+    border-radius: 10px;
+  }
+
+  .badge {
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    font-size: 0.65rem;
+  }
+
+  .detalle-titulo {
+    font-size: 1.4rem;
+  }
+
+  .detalle-categoria {
+    font-size: 0.75rem;
+  }
+
+  .precio-value {
+    font-size: 1.2rem;
+  }
+
+  .detalle-descripcion {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
+
+  .descripcion-titulo {
+    font-size: 0.95rem;
+  }
+
+  .descripcion-texto {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .btn-whatsapp {
+    padding: 11px 20px;
+    font-size: 0.85rem;
+    gap: 8px;
+    border-radius: 8px;
+  }
+
+  .detalle-nota {
+    font-size: 0.75rem;
+  }
+}

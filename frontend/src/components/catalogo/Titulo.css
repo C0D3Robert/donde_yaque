@@ -1,0 +1,51 @@
+/* ===== TITULO STYLES ===== */
+@import '../../styles/variables.css';
+
+.encabezado {
+  margin: var(--spacing-2xl) var(--spacing-4xl);
+  justify-items: start;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-text-secondary);
+  padding-bottom: var(--spacing-lg);
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: var(--font-size-2xl);
+    color: var(--color-text-primary);
+    letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .encabezado {
+    margin: var(--spacing-xl) var(--spacing-2xl);
+  }
+
+  .encabezado h1 {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .encabezado {
+    margin: var(--spacing-md) var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .encabezado h1 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .encabezado {
+    margin: var(--spacing-lg) var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .encabezado h1 {
+    font-size: var(--font-size-xl);
+  }
+}

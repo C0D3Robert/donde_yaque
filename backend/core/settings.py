@@ -173,7 +173,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny', 
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 12,
+    'PAGE_SIZE': 20,
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
         # En producción desactivamos el navegador API por seguridad
@@ -203,3 +203,6 @@ X_FRAME_OPTIONS = 'DENY'
 # CSRF_COOKIE_SECURE = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# URL del sitio frontend para el botón "Ver sitio" en admin
+SITE_URL = 'http://localhost:5173' 

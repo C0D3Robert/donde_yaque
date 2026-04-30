@@ -19,7 +19,8 @@ export default function SeccionPrendas({ titulo, seccion, linkText = 'Ver más' 
           params: { seccion },
         });
         const data = response.data.results || response.data;
-        setPrendas(data);
+        // Limitar a 5 items para la sección
+        setPrendas(data.slice(0, 5));
       } catch (err) {
         setError(`No se pudieron cargar las ${titulo.toLowerCase()}.`);
         console.error(err);
@@ -28,17 +29,17 @@ export default function SeccionPrendas({ titulo, seccion, linkText = 'Ver más' 
       }
     };
     fetchPrendas();
-  }, [seccion]);
+  }, [seccion, titulo]);
 
   const handleVerMas = () => {
-    navigate(`/catalogo?seccion=${seccion}`);
+    navigate(`/catalogo`);
   };
 
   return (
     <section className="seccion-prendas">
       <div className="seccion-header">
         <h2 className="seccion-titulo">{titulo}</h2>
-        <button className="ver-mas-link" onClick={handleVerMas}>
+        <button className="ver-mas-link" onClick={handleVerMas} aria-label={`${linkText} - ${titulo}`}>
           {linkText} <span className="flecha">→</span>
         </button>
       </div>

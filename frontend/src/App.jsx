@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
+import CatalogoPage from './pages/CatalogoPage';
+import DetallePage from './pages/DetallePage';
 import './App.css';
 
 function App() {
@@ -13,8 +15,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/catalogo" element={<HomePage />} />
-            {/* Podemos añadir rutas adicionales después */}
+            <Route path="/catalogo" element={<CatalogoPage />} />
+            <Route path="/prenda/:id" element={<DetallePage />} />
           </Routes>
         </Layout>
       </BrowserRouter>

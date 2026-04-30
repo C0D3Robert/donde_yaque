@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { IoMdSearch } from "react-icons/io";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 import RedesSociales from '../components/RedesSociales';
 import Logo from '../assets/logo.jpg';
 import './Navbar.css';
@@ -11,6 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -19,7 +21,7 @@ export default function Navbar() {
     if (searchQuery.trim()) {
       navigate(`/catalogo?search=${encodeURIComponent(searchQuery)}`);
       setSearchQuery('');
-      setIsOpen(false);
+      setIsOpen(false); 
     }
   };
 
@@ -28,10 +30,8 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
-  const handleInicioClick = () => {
-    navigate('');
-    setIsOpen(false);
-  };
+  // Verificar si estamos en la página del catálogo
+  const isInCatalogo = location.pathname === '/catalogo';
 
   return (
     <nav className="navbar">
@@ -52,6 +52,7 @@ export default function Navbar() {
           {/* Buscador */}
           <form className="search-form" onSubmit={handleSearch}>
             <input
+              name='Buscador'
               type="text"
               placeholder="Buscar prendas..."
               value={searchQuery}
@@ -66,19 +67,21 @@ export default function Navbar() {
           {/* Redes sociales */}
           <RedesSociales />
 
-          {/* Botón Catálogo */}
-          <button className="catalog-btn" onClick={handleCatalogClick}>
-            Ver Catálogo
-          </button>
+          {/* Botón Catálogo - Solo visible en desktop si no estamos en catálogo */}
+          {!isInCatalogo && (
+            <button className="catalog-btn" onClick={handleCatalogClick}>
+              <HiOutlineShoppingBag/>
+            </button>
+          )}
         </div>
       </div>
-      <div className='navegacion'>
-        <p>
-          <button className='no-style-btn' onClick={handleInicioClick}>
-            Inicio
-          </button>
-        </p>
-      </div>
+
+      {/* Botón Flotante Catálogo - Solo en móviles y si no estamos en catálogo */}
+      {!isInCatalogo && (
+        <button className="catalog-btn-floating" onClick={handleCatalogClick}>
+          <HiOutlineShoppingBag/>
+        </button>
+      )}
     </nav>
   );
 }
