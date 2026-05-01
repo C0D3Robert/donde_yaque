@@ -324,7 +324,7 @@ Personaliza colores, espaciado y fuentes editando ese archivo. Todos los compone
 
 ### 🏃 Opción 1: Desarrollo (Recomendado)
 
-Los mismos pasos de **Instalacíon Completa Paso a Paso** (#-instalación-completa-paso-a-paso)
+Los mismos pasos de [📦 Instalación Completa Paso a Paso](#-instalación-completa-paso-a-paso)
 
 Abre tu navegador en: **http://localhost:5173**
 
